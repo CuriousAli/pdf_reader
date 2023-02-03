@@ -34,3 +34,6 @@ simplejson==3.18.1
 six==1.16.0
 traits==6.3.2
 urllib3==1.26.14
+
+opencv-python~=4.7.0.68
+pyzbar~=0.1.9

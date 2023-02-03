@@ -2,7 +2,7 @@ import fitz
 
 from parser import *
 from path_holder import path
-from validator import comparing_sequence_with_standart
+from validator import comparing_sequence_with_standart, validating_barcode
 
 
 VOUCHER_INFO = {}
@@ -24,10 +24,8 @@ def checking_the_compliance_of_the_structure_with_the_requirements():
             comparing_sequence_with_standart(sequence)
 
 
-checking_the_compliance_of_the_structure_with_the_requirements()
+def checking_barcode(display=False):
+    validating_barcode(display)
 
 
-
-
-
-
+checking_barcode(True)

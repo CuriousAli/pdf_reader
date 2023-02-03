@@ -1,5 +1,5 @@
-path = r'/Users/ali/SeleniumProjects/pdf_processing/test_task.pdf'
-
+path = r'test_task.pdf'
+image_path = r'outfile.png'
 
 
 
