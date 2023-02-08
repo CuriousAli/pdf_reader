@@ -1,25 +1,9 @@
-import fitz
-
 from pyzbar.pyzbar import decode
 import cv2
 
-from path_holder import path
-
-
-def save_pdf_file_as_image():
-    '''Converting pdf file into image'''
-    with fitz.open(path) as doc:
-        page = doc.load_page(0)  # number of page
-        zoom = 3    # zoom factor
-        mat = fitz.Matrix(zoom, zoom)
-        pix = page.get_pixmap(matrix=mat)
-        output = "outfile.png"
-        pix.save(output)
-        return output
-
 
 # Make one method to decode the barcode
-def barcode_processing(image, display, value=3000):
+def extract_barcode_data(image, display, value=3000):
     # read the image in numpy array using cv2
     img = cv2.imread(image)
 
@@ -56,12 +40,4 @@ def barcode_processing(image, display, value=3000):
         cv2.destroyAllWindows()
 
     return data
-
-
-
-
-
-
-
-
 
